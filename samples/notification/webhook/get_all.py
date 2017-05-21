@@ -7,4 +7,4 @@ print(history)
 
 print("List Webhook:")
 for webhook in history:
-    print("  -> Webhook[%s]" % (webhook.name))
+    print(("  -> Webhook[%s]" % (webhook.name)))

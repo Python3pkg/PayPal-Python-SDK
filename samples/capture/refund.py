@@ -9,7 +9,7 @@ refund = capture.refund({
         "total": "110.54"}})
 
 if refund.success():
-    print("Refund[%s] Success" % (refund.id))
+    print(("Refund[%s] Success" % (refund.id)))
 else:
     print("Unable to Refund")
-    print(refund.error)
+    print((refund.error))

@@ -5,7 +5,7 @@ logging.basicConfig(level=logging.INFO)
 
 try:
     billing_plan = BillingPlan.find("P-0NJ10521L3680291SOAQIVT")
-    print("Got Billing Plan Details for Billing Plan[%s]" % (billing_plan.id))
+    print(("Got Billing Plan Details for Billing Plan[%s]" % (billing_plan.id)))
 
     billing_plan_update_attributes = [
         {
@@ -19,10 +19,10 @@ try:
 
     if billing_plan.replace(billing_plan_update_attributes):
         billing_plan = BillingPlan.find("P-0NJ10521L3680291SOAQIVT")
-        print("Billing Plan [%s] state changed to [%s]" %
-              (billing_plan.id, billing_plan.state))
+        print(("Billing Plan [%s] state changed to [%s]" %
+              (billing_plan.id, billing_plan.state)))
     else:
-        print(billing_plan.error)
+        print((billing_plan.error))
 
 except ResourceNotFound as error:
     print("Billing Plan Not Found")

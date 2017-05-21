@@ -9,7 +9,7 @@ login_url = Tokeninfo.authorize_url({'scope': 'openid profile'})
 
 print(login_url)
 
-code = raw_input('Authorize code: ')
+code = input('Authorize code: ')
 
 tokeninfo = Tokeninfo.create(code)
 

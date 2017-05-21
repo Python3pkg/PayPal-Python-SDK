@@ -8,4 +8,4 @@ print(history)
 
 print("List BillingPlan:")
 for plan in history.plans:
-    print("  -> BillingPlan[%s]" % (plan.id))
+    print(("  -> BillingPlan[%s]" % (plan.id)))

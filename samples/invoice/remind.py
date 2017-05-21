@@ -10,6 +10,6 @@ options = {
 }
 
 if invoice.remind(options):  # return True or False
-    print("Invoice[%s] remind successfully" % (invoice.id))
+    print(("Invoice[%s] remind successfully" % (invoice.id)))
 else:
-    print(invoice.error)
+    print((invoice.error))

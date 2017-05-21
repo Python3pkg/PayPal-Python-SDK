@@ -99,10 +99,10 @@ invoice = Invoice({
 })
 
 if invoice.create(refresh_token):
-    print("Third Party Invoice[%s] created successfully" % (invoice.id))
+    print(("Third Party Invoice[%s] created successfully" % (invoice.id)))
 
     # Fetch the resource similarly as shown below:
     result = Invoice.find(invoice.id, refresh_token=refresh_token)
-    print("Invoice Detail: %s" % result)
+    print(("Invoice Detail: %s" % result))
 else:
-    print(invoice.error)
+    print((invoice.error))

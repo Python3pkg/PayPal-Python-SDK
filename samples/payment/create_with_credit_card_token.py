@@ -54,7 +54,7 @@ payment = Payment({
 
 # Create Payment and return status
 if payment.create():
-    print("Payment[%s] created successfully" % (payment.id))
+    print(("Payment[%s] created successfully" % (payment.id)))
 else:
     print("Error while creating payment:")
-    print(payment.error)
+    print((payment.error))

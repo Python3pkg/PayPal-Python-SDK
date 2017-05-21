@@ -7,4 +7,4 @@ authorization = Authorization.find("6CR34526N64144512")
 if authorization.void():
     print("Void authorization successfully")
 else:
-    print(authorization.error)
+    print((authorization.error))

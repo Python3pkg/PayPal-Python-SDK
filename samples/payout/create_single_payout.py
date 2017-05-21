@@ -25,7 +25,7 @@ payout = Payout({
 })
 
 if payout.create(sync_mode=True):
-    print("payout[%s] created successfully" %
-          (payout.batch_header.payout_batch_id))
+    print(("payout[%s] created successfully" %
+          (payout.batch_header.payout_batch_id)))
 else:
-    print(payout.error)
+    print((payout.error))

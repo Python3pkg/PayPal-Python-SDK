@@ -115,7 +115,7 @@ class WebhookEvent(Find, List, Post):
             cert = crypto.load_certificate(crypto.FILETYPE_PEM, str(r.text))
             return cert
         except requests.exceptions.RequestException as e:
-            print("Error retrieving PayPal certificate with url " + cert_url)
+            print(("Error retrieving PayPal certificate with url " + cert_url))
             print(e)
 
     @classmethod
@@ -141,7 +141,7 @@ class WebhookEvent(Find, List, Post):
             'SHA1withRSA': 'sha1WithRSAEncryption'
         }
         try:
-            if auth_algo != 'sha256' and auth_algo not in __auth_algo_map.values():
+            if auth_algo != 'sha256' and auth_algo not in list(__auth_algo_map.values()):
                 auth_algo = __auth_algo_map[auth_algo]
         except KeyError as e:
             print('Authorization algorithm mapping not found in verify method.')

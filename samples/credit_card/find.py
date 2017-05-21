@@ -12,7 +12,7 @@ try:
     # static `find` method on the CreditCard class,
     # and pass CreditCard ID
     credit_card = CreditCard.find("CARD-5BT058015C739554AKE2GCEI")
-    print("Got CreditCard[%s]" % (credit_card.id))
+    print(("Got CreditCard[%s]" % (credit_card.id)))
 
 except ResourceNotFound as error:
     print("CreditCard Not Found")

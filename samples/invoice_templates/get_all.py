@@ -11,4 +11,4 @@ history = InvoiceTemplate.all()
 
 print("List Invoice Templates:")
 for invoice_template in history.templates:
-    print("  -> Invoice Template[%s]" % (invoice_template.template_id))
+    print(("  -> Invoice Template[%s]" % (invoice_template.template_id)))

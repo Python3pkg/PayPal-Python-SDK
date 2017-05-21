@@ -11,7 +11,7 @@ try:
 
     transactions = billing_agreement.search_transactions(start_date, end_date)
     for transaction in transactions.agreement_transaction_list:
-        print("  -> Transaction[%s]" % (transaction.transaction_id))
+        print(("  -> Transaction[%s]" % (transaction.transaction_id)))
 
 except ResourceNotFound as error:
     print("Billing Agreement Not Found")

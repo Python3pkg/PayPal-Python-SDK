@@ -6,7 +6,7 @@ import inspect
 try:
     from urllib.parse import urlencode
 except ImportError:
-    from urllib import urlencode
+    from urllib.parse import urlencode
 
 
 def join_url(url, *paths):

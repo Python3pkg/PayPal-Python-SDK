@@ -11,6 +11,6 @@ options = {
 }
 
 if invoice.cancel(options):  # return True or False
-    print("Invoice[%s] cancel successfully" % (invoice.id))
+    print(("Invoice[%s] cancel successfully" % (invoice.id)))
 else:
-    print(invoice.error)
+    print((invoice.error))

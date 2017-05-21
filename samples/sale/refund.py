@@ -18,7 +18,7 @@ refund = sale.refund({
 
 # Check refund status
 if refund.success():
-    print("Refund[%s] Success" % (refund.id))
+    print(("Refund[%s] Success" % (refund.id)))
 else:
     print("Unable to Refund")
-    print(refund.error)
+    print((refund.error))

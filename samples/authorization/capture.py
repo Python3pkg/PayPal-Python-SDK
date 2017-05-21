@@ -10,6 +10,6 @@ capture = authorization.capture({
     "is_final_capture": True})
 
 if capture.success():
-    print("Capture[%s] successfully" % (capture.id))
+    print(("Capture[%s] successfully" % (capture.id)))
 else:
-    print(capture.error)
+    print((capture.error))

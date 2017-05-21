@@ -32,14 +32,14 @@ if billing_agreement.create():
     for link in billing_agreement.links:
         if link.rel == "approval_url":
             approval_url = link.href
-            print(
-                "For approving billing agreement, redirect user to\n [%s]" % (approval_url))
+            print((
+                "For approving billing agreement, redirect user to\n [%s]" % (approval_url)))
 else:
-    print(billing_agreement.error)
+    print((billing_agreement.error))
 
 # After user approves the agreement, call execute with the payment token appended to
 # the redirect url to execute the billing agreement.
 # https://github.paypal.com/pages/lkutch/paypal-developer-docs/api/#execute-an-agreement
 billing_agreement_response = BillingAgreement.execute(payment_token)
-print("BillingAgreement[%s] executed successfully" %
-      (billing_agreement_response.id))
+print(("BillingAgreement[%s] executed successfully" %
+      (billing_agreement_response.id)))

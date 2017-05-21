@@ -10,6 +10,6 @@ authorization.amount = {
     "total": "7.00"}
 
 if authorization.reauthorize():
-    print("Reauthorized[%s] successfully" % (authorization.id))
+    print(("Reauthorized[%s] successfully" % (authorization.id)))
 else:
-    print(authorization.error)
+    print((authorization.error))

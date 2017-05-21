@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 try:
     # Get Sale object by passing sale id
     sale = Sale.find("7DY409201T7922549")
-    print("Got Sale details for Sale[%s]" % (sale.id))
+    print(("Got Sale details for Sale[%s]" % (sale.id)))
 
 except ResourceNotFound as error:
     print("Sale Not Found")

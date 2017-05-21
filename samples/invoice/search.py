@@ -13,6 +13,6 @@ options = {
 invoices = Invoice.search(options)
 
 if invoices.success():  # return True or False
-    print("Search Invoice[%s] successfully" % (invoices,))
+    print(("Search Invoice[%s] successfully" % (invoices,)))
 else:
-    print(invoices.error)
+    print((invoices.error))

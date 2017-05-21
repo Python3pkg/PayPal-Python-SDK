@@ -27,6 +27,6 @@ execute_payment_json = {
 };
 
 if payment.execute(execute_payment_json):  # return True or False
-  print("Payment[%s] execute successfully"%(payment.id))
+  print(("Payment[%s] execute successfully"%(payment.id)))
 else:
-  print(payment.error)
+  print((payment.error))

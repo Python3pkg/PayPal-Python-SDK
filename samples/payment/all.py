@@ -22,4 +22,4 @@ payment_history = Payment.all({"count": 2})
 # List Payments
 print("List Payment:")
 for payment in payment_history.payments:
-    print("  -> Payment[%s]" % (payment.id))
+    print(("  -> Payment[%s]" % (payment.id)))

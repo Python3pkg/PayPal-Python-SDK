@@ -38,7 +38,7 @@ credit_card = CreditCard({
 # Creates the credit card as a resource
 # in the PayPal vault.
 if credit_card.create():
-    print("CreditCard[%s] created successfully" % (credit_card.id))
+    print(("CreditCard[%s] created successfully" % (credit_card.id)))
 else:
     print("Error while creating CreditCard:")
-    print(credit_card.error)
+    print((credit_card.error))

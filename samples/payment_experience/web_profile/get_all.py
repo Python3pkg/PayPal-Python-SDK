@@ -7,4 +7,4 @@ print(history)
 
 print("List WebProfile:")
 for profile in history:
-    print("  -> WebProfile[%s]" % (profile.name))
+    print(("  -> WebProfile[%s]" % (profile.name)))

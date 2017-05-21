@@ -7,4 +7,4 @@ webhook = Webhook.find("8TJ12214WP9291246")
 if webhook.delete():
     print("Webhook deleted")
 else:
-    print(webhook.error)
+    print((webhook.error))

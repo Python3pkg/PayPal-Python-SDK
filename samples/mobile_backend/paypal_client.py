@@ -128,15 +128,15 @@ def charge_wallet(transaction, customer_id=None, correlation_id=None, intent="au
         return False, "Customer has not granted consent as no refresh token has been found for customer. Authorization code needed to get new refresh token."
 
     if payment.create(refresh_token, correlation_id):
-        print("Payment %s created successfully" % (payment.id))
+        print(("Payment %s created successfully" % (payment.id)))
         if payment['intent'] == "authorize":
             authorization_id = payment['transactions'][0][
                 'related_resources'][0]['authorization']['id']
-            print(
+            print((
                 "Payment %s authorized. Authorization id is %s" % (
                     payment.id, authorization_id
                 )
-            )
+            ))
         return True, "Charged customer " + customer_id + " " + transaction["amount"]["total"]
     else:
         return False, "Error while creating payment:" + str(payment.error)

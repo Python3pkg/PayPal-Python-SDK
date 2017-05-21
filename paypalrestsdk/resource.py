@@ -59,7 +59,7 @@ class Resource(object):
     def merge(self, new_attributes):
         """Merge new attributes e.g. response from a post to Resource
         """
-        for k, v in new_attributes.items():
+        for k, v in list(new_attributes.items()):
             setattr(self, k, v)
 
     def convert(self, name, value):
@@ -92,7 +92,7 @@ class Resource(object):
             else:
                 return value
 
-        return dict((key, parse_object(value)) for (key, value) in self.__data__.items())
+        return dict((key, parse_object(value)) for (key, value) in list(self.__data__.items()))
 
 
 class Find(Resource):

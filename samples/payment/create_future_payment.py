@@ -33,12 +33,12 @@ payment = paypalrestsdk.Payment({
 # else if authorize use the authorization id to capture
 # payment later using samples/authorization/capture.py
 if payment.create(refresh_token, correlation_id):
-    print("Payment %s created successfully" % (payment.id))
+    print(("Payment %s created successfully" % (payment.id)))
     if payment['intent'] == "authorize":
-        print(
+        print((
             "Payment %s authorized. Authorization id is %s"
             % (payment.id, payment['transactions'][0]['related_resources'][0]['authorization']['id'])
-        )
+        ))
 else:
     print("Error while creating payment:")
-    print(payment.error)
+    print((payment.error))

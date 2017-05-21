@@ -64,14 +64,14 @@ invoice = Invoice({
 })
 
 if invoice.create():
-    print("Invoice[%s] created successfully" % (invoice.id))
+    print(("Invoice[%s] created successfully" % (invoice.id)))
 else:
-    print(invoice.error)
+    print((invoice.error))
 
 if invoice.send():  # return True or False
-    print("Invoice[%s] send successfully" % (invoice.id))
+    print(("Invoice[%s] send successfully" % (invoice.id)))
 else:
-    print(invoice.error)
+    print((invoice.error))
 
 payment_attr = {
     "method": "CASH",
@@ -80,6 +80,6 @@ payment_attr = {
 }
 
 if invoice.record_payment(payment_attr):  # return True or False
-    print("Payment record on Invoice[%s] successfully" % (invoice.id))
+    print(("Payment record on Invoice[%s] successfully" % (invoice.id)))
 else:
-    print(invoice.error)
+    print((invoice.error))

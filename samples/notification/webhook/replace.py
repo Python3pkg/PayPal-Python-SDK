@@ -5,7 +5,7 @@ logging.basicConfig(level=logging.INFO)
 
 try:
     webhook = Webhook.find("70Y03947RF112050J")
-    print("Got Webhook Details for Webhook[%s]" % (webhook.id))
+    print(("Got Webhook Details for Webhook[%s]" % (webhook.id)))
 
     webhook_replace_attributes = [
         {
@@ -26,9 +26,9 @@ try:
 
     if webhook.replace(webhook_replace_attributes):
         webhook = Webhook.find("70Y03947RF112050J")
-        print("Webhook [%s] url changed to [%s]" % (webhook.id, webhook.url))
+        print(("Webhook [%s] url changed to [%s]" % (webhook.id, webhook.url)))
     else:
-        print(webhook.error)
+        print((webhook.error))
 
 except ResourceNotFound as error:
     print("Webhook Not Found")

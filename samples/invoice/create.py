@@ -61,6 +61,6 @@ invoice = Invoice({
 })
 
 if invoice.create():
-    print("Invoice[%s] created successfully" % (invoice.id))
+    print(("Invoice[%s] created successfully" % (invoice.id)))
 else:
-    print(invoice.error)
+    print((invoice.error))

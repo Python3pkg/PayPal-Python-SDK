@@ -9,6 +9,6 @@ refund_attr = {
 }
 
 if invoice.record_refund(refund_attr):  # return True or False
-    print("Payment record on Invoice[%s] successfully" % (invoice.id))
+    print(("Payment record on Invoice[%s] successfully" % (invoice.id)))
 else:
-    print(invoice.error)
+    print((invoice.error))
